@@ -1,10 +1,14 @@
-angular.module "darlin"
+angular.module 'darlin'
   .config ($stateProvider, $urlRouterProvider) ->
     $stateProvider
-      .state "home",
-        url: "/"
-        templateUrl: "app/main/main.html"
-        controller: "MainController"
-        controllerAs: "main"
+      .state 'tab',
+        url: '/tab/'
+        templateUrl: 'app/tabs/tabs.html'
+        controller: 'TabsCtrl'
+      .state 'tab.home',
+      	views:
+      		'home-tab':
+      			templateUrl: 'app/components/home.html'
+      			controller: 'HomeCtrl'
 
     $urlRouterProvider.otherwise '/'
