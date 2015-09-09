@@ -1,3 +1,3 @@
-angular.module 'darlin'
-	.controller 'HomeCtrl', ->
-		console.log 'home'
+angular.module 'app'
+.controller 'HomeCtrl', ->
+  console.log 'home'

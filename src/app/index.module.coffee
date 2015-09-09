@@ -1,4 +1,4 @@
-angular.module 'darlin', [
+angular.module 'app', [
   'ngAnimate'
   'ngCookies'
   'ngTouch'
@@ -7,4 +7,9 @@ angular.module 'darlin', [
   'ui.router'
   'pascalprecht.translate'
   'LocalStorageModule'
+  'ionic'
+]
+
+angular.module 'darlin', [
+  'app'
 ]

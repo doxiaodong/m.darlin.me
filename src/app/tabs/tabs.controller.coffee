@@ -1,7 +1,7 @@
-angular.module 'darlin'
-  .controller 'TabsCtrl', ($scope, $rootScope, $state) ->
-    reset = ->
-      $scope.hideTabs = !/tab.home|tab.article|tab.account/.test $state.current.name
+angular.module 'app'
+.controller 'TabsCtrl', ($scope, $rootScope, $state) ->
+  reset = ->
+    $scope.hideTabs = $state.current.noTab
 
-    $rootScope.$on '$ionicView.beforeEnter', ->
-      reset()
+  $rootScope.$on '$ionicView.beforeEnter', ->
+    reset()

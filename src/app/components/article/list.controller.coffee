@@ -1,3 +1,3 @@
-angular.module 'darlin'
-	.controller 'ArticleListCtrl', () ->
-		console.log 'list'
+angular.module 'app'
+.controller 'ArticleListCtrl', () ->
+  console.log 'list'

@@ -1,3 +1,3 @@
-angular.module "darlin"
-  .run (Visibility) ->
-    Visibility()
+angular.module "app"
+.run (utils) ->
+  utils.visibility()
