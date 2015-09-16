@@ -53,6 +53,8 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.useref())
     .pipe($.revReplace())
     .pipe(htmlFilter)
+    .pipe($.replace('"styles/', '"' + conf.paths.static_host + 'styles/'))
+    .pipe($.replace('"scripts/', '"' + conf.paths.static_host + 'scripts/'))
     .pipe($.minifyHtml({
       empty: true,
       spare: true,
@@ -91,3 +93,8 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('build', ['html', 'fonts', 'other']);
+
+gulp.task('online', ['clean'], function () {
+  conf.paths.static_host = conf.paths.static_host_online;
+  gulp.start('build');
+});

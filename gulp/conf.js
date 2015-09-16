@@ -15,7 +15,9 @@ exports.paths = {
   src: 'src',
   dist: 'dist',
   tmp: '.tmp',
-  e2e: 'e2e'
+  e2e: 'e2e',
+  static_host: '',
+  static_host_online: '//dn-dora.qbox.me/'
 };
 
 /**

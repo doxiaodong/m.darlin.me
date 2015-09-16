@@ -11,6 +11,7 @@ var _ = require('lodash');
 
 gulp.task('inject', ['scripts', 'styles'], function () {
   var injectStyles = gulp.src([
+    path.join(conf.paths.src, '/third/**/*.css'),
     path.join(conf.paths.tmp, '/serve/app/**/*.css'),
     path.join('!' + conf.paths.tmp, '/serve/app/vendor.css')
   ], { read: false });
@@ -20,6 +21,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
     path.join(conf.paths.src, '/app/**/*.js'),
     path.join(conf.paths.tmp, '/serve/app/**/*.module.js'),
     path.join(conf.paths.tmp, '/serve/app/**/*.js'),
+    path.join(conf.paths.src, '/third/**/*.js'),
     path.join('!' + conf.paths.src, '/app/**/*.spec.js'),
     path.join('!' + conf.paths.src, '/app/**/*.mock.js')
   ])
